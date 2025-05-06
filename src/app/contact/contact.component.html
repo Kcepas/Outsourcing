@@ -1,0 +1,19 @@
+<div class="contact">
+  <h2>Contact Us</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Message</mat-label>
+    <textarea matInput placeholder="Message" [(ngModel)]="message" name="message" required></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</div>

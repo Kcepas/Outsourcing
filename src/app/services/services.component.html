@@ -1,0 +1,15 @@
+<div class="services">
+  <h2>Our Services</h2>
+  <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile *ngFor="let service of services">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ service.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          {{ service.description }}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
