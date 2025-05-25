@@ -1,0 +1,110 @@
+/* Our Process Section */
+#process {
+  background-color: #f0f4f8;
+  padding: 4rem 0;
+}
+
+#process h2 {
+  color: #007B8F;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  animation: fadeIn 1s ease;
+}
+
+#process h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #00ACC1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+.process-step {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease;
+}
+
+.process-step:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.process-step:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 75px;
+  height: 100%;
+  background: linear-gradient(135deg, #E0F7FA, #ffffff);
+  transform: skewX(-45deg);
+  transition: background 0.5s ease;
+}
+
+.process-step:hover::before {
+  background: linear-gradient(135deg, #00ACC1, #ffffff);
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.process-icon {
+  font-size: 2.5rem;
+  color: #007B8F;
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+
+.process-step:hover .process-icon {
+  color: #00ACC1;
+  transform: rotate(-360deg);
+}
+
+.process-content h4 {
+  font-size: 1.5rem;
+  color: #007B8F;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.process-step:hover .process-content h4 {
+  color: #00ACC1;
+}
+
+.process-content p {
+  color: #666666;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.process-step:hover .process-content p {
+  color: #333333;
+}
+.navbar-brand {
+  font-weight: 600;
+  color: #04a9c3;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #04a9c3;
+}
+a.navbar-brand[routerLink].nav-link.active{
+  color: #04a9c3;
+}

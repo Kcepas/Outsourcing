@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  text-align: center;
+  padding: 100px 20px;
+  color: #004D56;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Contact CTA */
+.contact-cta {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  text-align: center;
+  padding: 80px 20px;
+  color: #004D56;
+}
+
+.contact-cta h2, .contact-cta p {
+  color: #004D56;
+}
+
+.contact-cta .btn-gradient {
+  background: linear-gradient(135deg, #04a9c3, #007B8F);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-cta .btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tech Stack (Bubble Style) */
+.tech-stack {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tech-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tech-bubble {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  color: #004D56;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-bubble:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-box {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  color: #004D56;
+margin-bottom: 15px
+}
+
+#faq h2, #tech-stack h2 {
+  color: #004D56; 
+  font-size: 2.5rem; }
+
+
+.faq-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* General Section Styling */
+.section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+      font-size: 2.5rem;
+  }
+  .hero-section p {
+      font-size: 1rem;
+  }
+
+  .tech-bubble {
+      width: 100px;
+      height: 100px;
+      font-size: 1rem;
+  }
+}
+
+/* Tech Bubbles - Modified according to your request */
+.tech-bubbles {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.tech-bubble {
+background: linear-gradient(135deg, #04a9c3, #007B8F); 
+color: white;
+font-weight: bold;
+font-size: 1.2rem;
+padding: 20px;
+border-radius: 50%;
+width: 120px;
+height: 120px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.tech-bubble:hover {
+transform: scale(1.05);
+box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width:768px) {
+.tech-bubble {
+  width:100px;
+  height:100px;
+  font-size:1rem;
+  padding:15px;
+}
+}

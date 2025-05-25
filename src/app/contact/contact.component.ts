@@ -1,34 +1,39 @@
 import { Component } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  name: string = '';
-  email: string = '';
-  message: string = '';
+  contactData = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
-  onSubmit() {
-    console.log('Form submitted!');
-    console.log('Name:', this.name);
-    console.log('Email:', this.email);
-    console.log('Message:', this.message);
-    
-    // Исчисти ги полињата по поднесувањето
-    this.name = '';
-    this.email = '';
-    this.message = '';
-    
-    // Додади потврда за корисникот
-    alert('Your message has been sent!');
+  // Метод за испраќање на формата
+  onSubmit(contactForm: any) {
+    if (contactForm.invalid) {
+      alert('Please fill out all required fields correctly.');
+      return;
+    }
+
+    const templateParams = {
+      from_name: this.contactData.name,
+      from_email: this.contactData.email,
+      message: this.contactData.message
+    };
+
+    emailjs.send('service_izja6ip', 'template_j1168bv', templateParams, 's38qxqRH8fUTw_Pkr')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Your message has been sent successfully!');
+      }, (error) => {
+        console.error('FAILED...', error);
+        alert('Failed to send your message. Please try again later.');
+      });
+      contactForm.reset();
   }
 }

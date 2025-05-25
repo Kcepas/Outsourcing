@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
+import { CloudServicesComponent } from './cloud-services.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('CloudServicesComponent', () => {
+  let component: CloudServicesComponent;
+  let fixture: ComponentFixture<CloudServicesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FooterComponent]
+      declarations: [CloudServicesComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(FooterComponent);
+    
+    fixture = TestBed.createComponent(CloudServicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

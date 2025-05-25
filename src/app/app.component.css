@@ -1,0 +1,270 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #f0f4f8;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position: fixed;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-brand {
+    font-weight: 600;
+    color: #04a9c3;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #04a9c3;
+  }
+  a.navbar-brand[routerLink].nav-link.active{
+    color: #04a9c3;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #555555;
+    margin-left: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #007B8F;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: #007B8F;
+  }
+  
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    width: 100%;
+  }
+  
+  a.navbar-brand[routerLink] {
+    font-weight: 600;
+    color: #007B8F;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  a.navbar-brand[routerLink]:hover {
+    color: #00ACC1 !important;
+    transform: scale(1.05);
+  }
+  a.navbar-brand[routerLink].active {
+    color: #00ACC1;
+    position: relative;
+  }
+  a.navbar-brand[routerLink].active::after {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #00ACC1;
+    position: absolute;
+    left: 20%;
+    bottom: -5px;
+  }
+  /* Fade-in Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  /* Float Animation for Decorative Circles */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Gradient Shift Animation */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Slide Down Animation for Navbar */
+  @keyframes slideDown {
+    from { top: -100px; opacity: 0; }
+    to { top: 0; opacity: 1; }
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #ffffff;
+    color: #666666;
+    font-size: 0.9rem;
+    padding: 2rem 0;
+    animation: fadeIn 1s ease;
+  }
+  
+  footer a {
+    color: #007B8F;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #008E9B;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .lead {
+      font-size: 1rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .btn-gradient,
+    .btn-outline-light {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .card .card-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* General Section Styling */
+  .section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f0f4f8;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Grid Layouts */
+  .grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Industries */
+  .industries {
+    background: #ffffff;
+  }
+  
+  .box h3 {
+    color: #007B8F;
+  }
+  
+  /* Case Studies */
+  .case-studies {
+    background: #e8f5f9;
+  }
+  
+  /* Outsourcing Benefits */
+  .outsourcing-benefits {
+    background: white;
+  }
+  
+  /* Technology Stack */
+  .tech-stack {
+    background: #f0f4f8;
+  }
+  
+  .tech-stack .grid {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007B8F;
+    margin: 10px;
+  }
+  
+  /* FAQ Section */
+  .faq-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Call to Action */
+  .contact-cta {
+    background: #007B8F;
+    color: white;
+  }
+  
+  .contact-cta .btn-gradient {
+    background: white;
+    color: #007B8F;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  
+  
